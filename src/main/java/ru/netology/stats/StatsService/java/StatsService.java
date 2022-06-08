@@ -44,7 +44,7 @@ public class StatsService {
     public int monthsWhereSumHigherAverage(int[] months) { // Кол-во месяцев, в которых продажи были выше среднего
         int numbersOfMonths = 0;
         for (int i = 0; i < months.length; i++) {
-            if (months[i] > 15) { // 15 взято из прошлого метода, пыталась сослаться на значение averageMonth.AverageMonths, но не получилось
+            if (months[i] > averageMonths(months)) {
                 numbersOfMonths = numbersOfMonths + 1;
 
             }
